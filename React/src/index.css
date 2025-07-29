@@ -22,6 +22,12 @@
   --pjg-color-6: rgba(255, 255, 255, 0.87);
   --pjg-background-color: #033b32;
 
+  --pjg-size-1: 1rem;
+  --pjg-size-2: 1.5rem;
+  --pjg-size-3: 2rem;
+  --pjg-size-4: 2.5rem;
+  --pjg-size-5: 3rem;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

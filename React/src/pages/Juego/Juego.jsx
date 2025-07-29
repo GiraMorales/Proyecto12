@@ -1,4 +1,4 @@
-import 'Juego.css';
+import './Juego.css';
 
 const Juego = () => {
   return <div className='juego'></div>;
