@@ -5,8 +5,10 @@ import {
   initialState
 } from '../../Reducers/GameReducer/gameReducer';
 import { useBingoCarton } from '../../Hooks/useBingoCarton/useBingoCarton';
+import { useNavigate } from 'react-router-dom';
 
 const Juego = () => {
+  const navigate = useNavigate();
   const [state, dispatch] = useReducer(gameReducer, initialState);
   const { carton } = useBingoCarton();
 
@@ -21,6 +23,14 @@ const Juego = () => {
 
     if (state.numerosCantados.length < 75) {
       dispatch({ type: 'CANTAR_NUMERO', payload: numero });
+
+      // Chequeo de ganador (delay opcional para que el número se vea primero)
+      setTimeout(() => {
+        if (hayBingo(carton, [...state.numerosCantados, numero])) {
+          dispatch({ type: 'TERMINAR_JUEGO' });
+          navigate('/ganador');
+        }
+      }, 300); // espera 300ms para que se vea el número nuevo marcado
     }
   };
 
@@ -42,38 +52,39 @@ const Juego = () => {
       >
         Iniciar Juego
       </button>
-
-      <div className='numeros-cantados'>
-        <h3>Números Cantados:</h3>
-        <div className='lista-numeros'>
-          {state.numerosCantados.map((n, i) => (
-            <span key={i} className='numero'>
-              {n}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      <div className='carton'>
-        <h3>Tu Cartón:</h3>
-        <table>
-          <tbody>
-            {carton.map((fila, i) => (
-              <tr key={i}>
-                {fila.map((celda, j) => (
-                  <td
-                    key={j}
-                    className={
-                      state.numerosCantados.includes(celda) ? 'marcado' : ''
-                    }
-                  >
-                    {celda}
-                  </td>
-                ))}
-              </tr>
+      <div className='numeros-carton'>
+        <div className='numeros-cantados'>
+          <div className='titulo-numeros'>
+            <h3>Números Cantados:</h3>
+            <div className='lista-numeros'> </div>
+            {state.numerosCantados.map((n, i) => (
+              <span key={i} className='numero'>
+                {n}
+              </span>
             ))}
-          </tbody>
-        </table>
+          </div>
+        </div>
+        <div className='carton'>
+          <h3>Tu Cartón:</h3>
+          <table>
+            <tbody>
+              {carton.map((fila, i) => (
+                <tr key={i}>
+                  {fila.map((celda, j) => (
+                    <td
+                      key={j}
+                      className={
+                        state.numerosCantados.includes(celda) ? 'marcado' : ''
+                      }
+                    >
+                      {celda}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>{' '}
+        </div>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 .juego {
-  padding: var(--pjg-size-3);
+  padding: var(--pjg-size-1);
   text-align: center;
 }
 
@@ -21,14 +21,17 @@
 }
 
 .numeros-cantados {
-  margin: var(--pjg-size-1) 0;
+  margin: var(--pjg-size-2) 5rem;
 }
 
 .lista-numeros {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: var(--pjg-size-2);
   justify-content: center;
+  position: absolute;
+  right: 20rem;
+  width: 30rem;
 }
 
 .numero {
@@ -43,8 +46,13 @@
 }
 
 .carton {
-  margin-top: var(--pjg-size-3);
-  margin-bottom: var(--pjg-size-1);
+  margin-top: var(--pjg-size-1);
+  gap: var(--pjg-size-3);
+  margin-left: var(--pjg-size-6);
+  position: absolute;
+  left: 20rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .carton table {
@@ -64,4 +72,32 @@
 .marcado {
   background-color: var(--pjg-color-3);
   color: var(--pjg-color-6);
+}
+
+.numeros-carton {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  font-size: var(--pjg-size-2);
+}
+
+.titulo-numeros {
+  display: flex;
+  margin-bottom: var(--pjg-size-2);
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--pjg-size-1);
+  justify-content: center;
+  position: absolute;
+  right: 20rem;
+  width: 30rem;
+  font-size: var(--pjg-size-2);
+}
+
+.titulo-numeros h3 {
+  width: 100%;
+  text-align: center;
+  font-size: var(--pjg-size-3);
+  color: var(--pjg-color-3);
 }
