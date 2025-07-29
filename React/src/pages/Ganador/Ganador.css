@@ -1,5 +1,5 @@
 .ganador {
-  margin-top: 10rem;
+  margin-top: var(--pjg-size-7);
   text-align: center;
   padding: var(--pjg-size-3);
   animation: aparecer 1s ease-in;

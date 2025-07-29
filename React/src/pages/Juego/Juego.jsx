@@ -7,6 +7,7 @@ import {
 import { useBingoCarton } from '../../Hooks/useBingoCarton/useBingoCarton';
 import { useNavigate } from 'react-router-dom';
 import { hayBingo } from '../../Utils/HayBingo/HayBingo';
+import { CartonBingo } from '../../Components/CartonBingo/CartonBingo';
 
 const Juego = () => {
   const navigate = useNavigate();
@@ -34,9 +35,9 @@ const Juego = () => {
       }, 300); // espera 300ms para que se vea el número nuevo marcado
     }
   };
-  const iniciarJuego = () => {
-    dispatch({ type: 'INICIAR_JUEGO' });
-  };
+  // const iniciarJuego = () => {
+  //   dispatch({ type: 'INICIAR_JUEGO' });
+  // };
 
   return (
     <div className='juego'>
@@ -70,24 +71,10 @@ const Juego = () => {
         </div>
         <div className='carton'>
           <h3>Tu Cartón:</h3>
-          <table>
-            <tbody>
-              {carton.map((fila, i) => (
-                <tr key={i}>
-                  {fila.map((celda, j) => (
-                    <td
-                      key={j}
-                      className={
-                        state.numerosCantados.includes(celda) ? 'marcado' : ''
-                      }
-                    >
-                      {celda}
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>{' '}
+          <CartonBingo
+            carton={carton}
+            numerosCantados={state.numerosCantados}
+          />
         </div>
       </div>
     </div>
