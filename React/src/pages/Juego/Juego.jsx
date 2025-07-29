@@ -6,6 +6,7 @@ import {
 } from '../../Reducers/GameReducer/gameReducer';
 import { useBingoCarton } from '../../Hooks/useBingoCarton/useBingoCarton';
 import { useNavigate } from 'react-router-dom';
+import { hayBingo } from '../../Utils/HayBingo/HayBingo';
 
 const Juego = () => {
   const navigate = useNavigate();
@@ -32,6 +33,9 @@ const Juego = () => {
         }
       }, 300); // espera 300ms para que se vea el número nuevo marcado
     }
+  };
+  const iniciarJuego = () => {
+    dispatch({ type: 'INICIAR_JUEGO' });
   };
 
   return (

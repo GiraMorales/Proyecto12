@@ -14,7 +14,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  --pjg-color-1: #1c3f73;
+  --pjg-color-1: #366d5c;
   --pjg-color-2: #3b8ea0;
   --pjg-color-3: #5abf98;
   --pjg-color-4: #86d5d8;
@@ -27,7 +27,7 @@
   --pjg-size-3: 2rem;
   --pjg-size-4: 2.5rem;
   --pjg-size-5: 2rem;
-  --pjg-size-5: 3rem;
+  --pjg-size-6: 3rem;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

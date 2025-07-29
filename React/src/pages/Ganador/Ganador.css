@@ -1,17 +1,25 @@
 .ganador {
+  margin-top: 10rem;
   text-align: center;
   padding: var(--pjg-size-3);
   animation: aparecer 1s ease-in;
 }
 
 .ganador h1 {
-  font-size: var(--pjg-size-3);
+  font-size: var(--pjg-size-6);
+  color: var(--pjg-color-1);
+  margin: var(--pjg-size-3);
+}
+
+.ganador p {
+  font-size: var(--pjg-size-6);
   color: var(--pjg-color-3);
+  margin: var(--pjg-size-3);
 }
 
 .btn-volver {
   display: inline-block;
-  margin-top: var(--pjg-size-2);
+  margin-top: var(--pjg-size-6);
   padding: var(--pjg-size-1) var(--pjg-size-2);
   background-color: var(--pjg-color-2);
   color: var(--pjg-color-6);

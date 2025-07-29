@@ -1,5 +1,3 @@
-// src/hooks/useBingoCarton.js
-
 import { useState, useEffect } from 'react';
 
 const generarCarton = () => {
