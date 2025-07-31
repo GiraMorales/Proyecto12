@@ -35,9 +35,6 @@ const Juego = () => {
       }, 300); // espera 300ms para que se vea el número nuevo marcado
     }
   };
-  // const iniciarJuego = () => {
-  //   dispatch({ type: 'INICIAR_JUEGO' });
-  // };
 
   return (
     <div className='juego'>
@@ -58,17 +55,16 @@ const Juego = () => {
         Iniciar Juego
       </button>
       <div className='numeros-carton'>
-        <div className='numeros-cantados'>
-          <div className='titulo-numeros'>
-            <h3>Números Cantados:</h3>
-            <div className='lista-numeros'> </div>
-            {state.numerosCantados.map((n, i) => (
-              <span key={i} className='numero'>
-                {n}
-              </span>
-            ))}
-          </div>
+        <div className='titulo-numeros'>
+          <h3>Números Cantados:</h3>
+          <div className='lista-numeros'> </div>
+          {state.numerosCantados.map((n, i) => (
+            <span key={i} className='numero'>
+              {n}
+            </span>
+          ))}
         </div>
+
         <div className='carton'>
           <h3>Tu Cartón:</h3>
           <CartonBingo

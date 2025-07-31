@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   padding: var(--pjg-size-2);
-  height: 80vh;
+  height: 90vh;
   text-align: center;
   background: linear-gradient(to right, #ece9e6, #ffffff);
   font-size: var(--pjg-size-3);
@@ -29,4 +29,32 @@
 
 body {
   overflow-y: hidden;
+}
+
+@media screen and (max-width: 1050px) {
+  .home {
+    padding: var(--pjg-size-1);
+    font-size: var(--pjg-size-2);
+  }
+
+  .start-button {
+    padding: var(--pjg-size-1) var(--pjg-size-1);
+    font-size: var(--pjg-size-1);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .home {
+    font-size: var(--pjg-size-1);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .home h1 {
+    width: 60%;
+  }
+  .home p {
+    width: 50%;
+    margin-top: 2%;
+  }
 }

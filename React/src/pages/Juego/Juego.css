@@ -20,12 +20,7 @@
   cursor: not-allowed;
 }
 
-.numeros-cantados {
-  margin: var(--pjg-size-2) 5rem;
-}
-
 .lista-numeros {
-  display: flex;
   flex-wrap: wrap;
   gap: var(--pjg-size-2);
   justify-content: center;
@@ -48,11 +43,10 @@
 .carton {
   margin-top: var(--pjg-size-1);
   gap: var(--pjg-size-3);
-  margin-left: var(--pjg-size-6);
-  position: absolute;
-  left: 20rem;
+  margin-left: var(--pjg-size-1);
   display: flex;
   flex-direction: column;
+  margin-top: 3%;
 }
 
 .carton table {
@@ -68,6 +62,9 @@
   font-size: var(--pjg-size-2);
   font-weight: bold;
 }
+.carton h3 {
+  font-size: var(--pjg-size-4);
+}
 
 .marcado {
   background-color: var(--pjg-color-3);
@@ -76,28 +73,95 @@
 
 .numeros-carton {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: center;
-  font-size: var(--pjg-size-2);
+  font-size: var(--pjg-size-3);
+  gap: var(--pjg-size-7);
 }
 
 .titulo-numeros {
-  display: flex;
   margin-bottom: var(--pjg-size-2);
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: var(--pjg-size-1);
   justify-content: center;
-  position: absolute;
-  right: 20rem;
   width: 30rem;
+  margin-top: 3%;
   font-size: var(--pjg-size-2);
 }
 
 .titulo-numeros h3 {
   width: 100%;
   text-align: center;
-  font-size: var(--pjg-size-3);
+  font-size: var(--pjg-size-4);
   color: var(--pjg-color-3);
+}
+
+@media screen and (max-width: 860px) {
+  .titulo-numeros h3 {
+    font-size: var(--pjg-size-2);
+  }
+  .carton h3 {
+    font-size: var(--pjg-size-2);
+  }
+  .titulo-numeros {
+    font-size: var(--pjg-size-1);
+    width: 20rem;
+  }
+  .carton td {
+    font-size: var(--pjg-size-1);
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .titulo-numeros h3 {
+    font-size: var(--pjg-size-2);
+  }
+  .carton h3 {
+    font-size: var(--pjg-size-2);
+  }
+  .titulo-numeros {
+    font-size: 0.8rem;
+    margin-left: 5%;
+    gap: 2%;
+    margin-top: 3%;
+  }
+  .carton td {
+    font-size: var(--pjg-size-1);
+  }
+  .numeros-carton {
+    gap: var(--pjg-size-3);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .titulo-numeros h3 {
+    font-size: var(--pjg-size-1);
+  }
+  .carton h3 {
+    font-size: var(--pjg-size-1);
+  }
+  .titulo-numeros {
+    font-size: 0.5rem;
+    margin-left: 2%;
+    gap: 1%;
+    margin-top: 2%;
+  }
+  .carton td {
+    font-size: 0.5rem;
+  }
+  .numeros-carton {
+    gap: var(--pjg-size-1);
+    font-size: var(--pjg-size-1);
+  }
+  .carton {
+    gap: 2%;
+  }
+  .juego h2 {
+    font-size: var(--pjg-size-1);
+  }
+  .btn-cantar,
+  .btn-iniciar {
+    font-size: 0.5rem;
+  }
 }

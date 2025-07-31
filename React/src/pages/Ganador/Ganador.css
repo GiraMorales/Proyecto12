@@ -38,3 +38,14 @@
     transform: scale(1);
   }
 }
+@media screen and (max-width: 500px) {
+  .ganador {
+    margin-top: var(--pjg-size-2);
+  }
+  .ganador h1 {
+    font-size: var(--pjg-size-3);
+  }
+  .ganador p {
+    font-size: var(--pjg-size-3);
+  }
+}
