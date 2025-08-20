@@ -136,53 +136,75 @@
 
 @media screen and (max-width: 660px) {
   .titulo-numeros h3 {
-    font-size: var(--pjg-size-2);
+    font-size: var(--pjg-size-1);
   }
   .carton h3 {
-    font-size: var(--pjg-size-2);
+    font-size: var(--pjg-size-1);
   }
   .titulo-numeros {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     margin-left: 5%;
     gap: 2%;
     margin-top: 3%;
   }
   .carton td {
-    font-size: var(--pjg-size-1);
+    .carton td {
+      font-size: 0.2rem;
+    }
   }
   .numeros-carton {
-    gap: var(--pjg-size-3);
+    gap: var(--pjg-size-1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: var(--pjg-size-3);
+  }
+  .carton {
+    gap: var(--pjg-size-1);
+  }
+
+  .carton td {
+    font-size: var(--pjg-size-1);
+  }
+  .numero {
+    width: var(--pjg-size-2);
+    height: var(--pjg-size-2);
+    font-size: 10px;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 300px) {
   .titulo-numeros h3 {
-    font-size: var(--pjg-size-1);
+    font-size: 10px;
   }
   .carton h3 {
     font-size: var(--pjg-size-1);
   }
-  .titulo-numeros {
-    font-size: 0.5rem;
-    margin-left: 2%;
-    gap: 1%;
-    margin-top: 2%;
-  }
+
   .carton td {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
   }
-  .numeros-carton {
-    gap: var(--pjg-size-1);
-    font-size: var(--pjg-size-1);
-  }
-  .carton {
-    gap: 2%;
-  }
+
   .juego h2 {
     font-size: var(--pjg-size-1);
   }
-  .btn-cantar,
   .btn-iniciar {
-    font-size: 0.5rem;
+    width: 40%;
+    margin: 0 auto;
+    font-size: 0.7rem;
+  }
+
+  .numero {
+    width: var(--pjg-size-1);
+    height: var(--pjg-size-1);
+    margin: 0.1rem;
+  }
+
+  /* .lista-numeros {
+    margin: 10px auto;
+  } */
+
+  .titulo-numeros {
+    padding: 10px 30px;
   }
 }

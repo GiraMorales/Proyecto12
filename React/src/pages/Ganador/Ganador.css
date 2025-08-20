@@ -56,3 +56,15 @@
     font-size: var(--pjg-size-3);
   }
 }
+
+@media screen and (max-width: 300px) {
+  .ganador {
+    margin-top: var(--pjg-size-1);
+  }
+  .ganador h1 {
+    font-size: var(--pjg-size-1);
+  }
+  .ganador h2 {
+    font-size: var(--pjg-size-1);
+  }
+}
