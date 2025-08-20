@@ -1,8 +1,7 @@
-// src/reducers/gameReducer.js
-
 export const initialState = {
   numerosCantados: [],
-  enJuego: false
+  enJuego: false,
+  lineaGanada: false
 };
 
 export const gameReducer = (state, action) => {
@@ -10,7 +9,8 @@ export const gameReducer = (state, action) => {
     case 'INICIAR_JUEGO':
       return {
         numerosCantados: [],
-        enJuego: true
+        enJuego: true,
+        lineaGanada: false
       };
 
     case 'CANTAR_NUMERO':
@@ -19,6 +19,12 @@ export const gameReducer = (state, action) => {
       return {
         ...state,
         numerosCantados: [...state.numerosCantados, action.payload]
+      };
+
+    case 'LINEA_GANADA':
+      return {
+        ...state,
+        lineaGanada: true
       };
 
     case 'TERMINAR_JUEGO':

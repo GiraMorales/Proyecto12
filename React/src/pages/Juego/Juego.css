@@ -21,17 +21,14 @@
 }
 
 .lista-numeros {
+  display: flex;
   flex-wrap: wrap;
-  gap: var(--pjg-size-2);
-  justify-content: center;
-  position: absolute;
-  right: 20rem;
-  width: 30rem;
+  width: 25rem;
 }
 
 .numero {
   background: var(--pjg-color-6);
-  padding: 0.5rem;
+  padding: 0.2rem;
   border-radius: 50%;
   width: var(--pjg-size-3);
   height: var(--pjg-size-3);
@@ -46,7 +43,7 @@
   margin-left: var(--pjg-size-1);
   display: flex;
   flex-direction: column;
-  margin-top: 3%;
+  margin-top: 2%;
 }
 
 .carton table {
@@ -63,7 +60,7 @@
   font-weight: bold;
 }
 .carton h3 {
-  font-size: var(--pjg-size-4);
+  font-size: var(--pjg-size-3);
 }
 
 .marcado {
@@ -76,7 +73,7 @@
   flex-direction: row;
   justify-content: center;
   font-size: var(--pjg-size-3);
-  gap: var(--pjg-size-7);
+  gap: var(--pjg-size-6);
 }
 
 .titulo-numeros {
@@ -95,6 +92,30 @@
   text-align: center;
   font-size: var(--pjg-size-4);
   color: var(--pjg-color-3);
+}
+
+.alerta-linea {
+  background: var(--pjg-color-2);
+  border: 2px solid var(--pjg-color-3);
+  color: var(--pjg-color-6);
+  font-weight: bold;
+  padding: 5px 15px;
+  margin: 5px 0;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1rem;
+  animation: aparecer 0.5s ease-in-out;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @media screen and (max-width: 860px) {
